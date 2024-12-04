@@ -17,10 +17,10 @@
 7. run `php artisan serve`
 
 ## API DOCUMENTATION
-    api documentation is in the openapi-octobees.yml file (project root), api documentation uses OpenAPI, you can install the OpenAPI extension in VSCode
+api documentation is in the `openapi-octobees.yml` file (project root), api documentation uses OpenAPI, you can install the OpenAPI extension in VSCode
 
 ## DB Diagram
-    The table database documentation is in the database/dbdocs/db.dbml folder, you can copy the contents of the file and move it to the dbdiagram website.
+The table database documentation is in the `database/dbdocs/db.dbml` folder, you can copy the contents of the file and move it to the dbdiagram website.
 
 ## About Laravel
 
