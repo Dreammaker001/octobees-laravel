@@ -1,0 +1,14 @@
+services:
+  mypostgre:
+    image: postgres:latest
+    container_name: mypostgre
+    environment:
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgre-volume:/var/lib/postgresql/data
+
+volumes:
+  postgre-volume:

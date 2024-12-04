@@ -1,0 +1,89 @@
+openapi: '3.0.3'
+info:
+  title: API Title
+  version: '1.0'
+servers:
+  - url: http://localhost:8080/v1
+tags:
+  - name : Person
+    description: 'Api about person'
+paths:
+  /persons:
+    get:
+      tags:
+        - Person
+      responses:
+        '200':
+          description: OK
+    post:
+      tags:
+        - Person
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PersonCreate'
+      responses:
+        '200':
+          description: OK
+  /persons/{id}:
+    get:
+      tags:
+        - Person
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: OK
+    put:
+      tags:
+        - Person
+      description: ''
+      parameters:
+        - name: id
+          in : path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PersonCreate'
+      responses:
+        '200':
+          description: OK
+    delete:
+      tags:
+        - Person
+      description: ''
+      parameters:
+        - name: id
+          in : path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+components:
+  schemas:
+    
+    PersonCreate:
+      type: object
+      required:
+        - name
+        - dob
+        - address
+      properties:
+        name:
+          type: string
+          example: "test"
+        dob:
+          type: string
+          example: "2024-11-04"
+        address:
+          type: string
+          example: "jl.testing"
