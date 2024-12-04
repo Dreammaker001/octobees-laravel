@@ -22,7 +22,9 @@ class PersonController extends Controller
      */
     public function index()
     {
-        $query = $this->model::paginate($this->paginationPerPage);
+        $q = request()->query('q');
+        
+        $query = $this->model::where('name', 'LIKE', '%'.$q.'%')->paginate($this->paginationPerPage);
         $data = $this->resource::collection($query);
 
         return $data;

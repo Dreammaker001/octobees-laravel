@@ -1,0 +1,10 @@
+Table Person {
+  id int [pk]
+  name varchar
+  dob date
+  address varchar
+  created_at timestamp
+  updated_at timestamp
+  created_by int
+  updated_by int
+}

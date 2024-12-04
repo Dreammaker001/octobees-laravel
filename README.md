@@ -7,6 +7,21 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## How to run
+1. install docker on your pc
+2. run `docker-compose up -d`
+3. rename file .env-example to .env
+4. check your php version, this project is done using PHP version 8.4.1
+5. run `composer install`
+6. run `php artisan migrate`
+7. run `php artisan serve`
+
+## API DOCUMENTATION
+    api documentation is in the openapi-octobees.yml file (project root), api documentation uses OpenAPI, you can install the OpenAPI extension in VSCode
+
+## DB Diagram
+    The table database documentation is in the database/dbdocs/db.dbml folder, you can copy the contents of the file and move it to the dbdiagram website.
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:

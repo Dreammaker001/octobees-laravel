@@ -10,6 +10,11 @@ tags:
 paths:
   /persons:
     get:
+      parameters:
+          - name: q
+            in : query
+            schema:
+              type: string
       tags:
         - Person
       responses:
